@@ -1059,16 +1059,37 @@ var RAL = {
         , color_en: 'Pearl dark grey'
         , color_de: 'Perldunkelgrau'
     }
-    , get_color: function (RAL) {
+    };
+RAL.getColor = function (RAL) {
         return this["RAL" + RAL].colorRGB;
-    },
-    , get_color_obj: function (RAL) {
+    };
+RAL.getColorObj = function (RAL) {
         return {r:this["RAL" + RAL].colorRGB[0], g:this["RAL" + RAL].colorRGB[1], b: this["RAL" + RAL].colorRGB[2]} ;
-    }
-    , getColorEng: function (RAL) {
+    };
+RAL.getColorEng = function (RAL) {
         return this["RAL" + RAL].color_en;
-    }
-    , getColorGer: function (RAL) {
+    };
+RAL.getColorGer = function (RAL) {
         return this["RAL" + RAL].color_de;
-    }
+    };
+RAL.getRandomColor = function(){
+for(var prop in this){
+var tempArr = [];
+var t = prop.toString();
+if(t.indexOf("RAL") === 0){
+tempArr.push(this[prop]);
 }
+}
+return tempArr[Math.floor(Math.random() * tempArr.length].colorRGB;
+    };
+RAL.getRandomColorObj = function(){
+for(var prop in this){
+var tempArr = [];
+var t = prop.toString();
+if(t.indexOf("RAL") === 0){
+tempArr.push(this[prop]);
+}
+}
+var objArr = tempArr[Math.floor(Math.random() * tempArr.length].colorRGB
+return {r: objArr[0], g: objArr[1], b: objArr[2]};
+};
