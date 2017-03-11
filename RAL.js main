@@ -1061,15 +1061,27 @@ var RAL = {
     }
     };
 RAL.getColor = function (RAL) {
-        return this["RAL" + RAL].colorRGB;
+RAL = RAL.toLowerCase();
+RAL = RAL.replace("ral","");
+RAL = RAL.replace(/\W+/g, "");
+return this["RAL" + RAL].colorRGB;
     };
 RAL.getColorObj = function (RAL) {
+RAL = RAL.toLowerCase();
+RAL = RAL.replace("ral","");
+RAL = RAL.replace(/\W+/g, "");
         return {r:this["RAL" + RAL].colorRGB[0], g:this["RAL" + RAL].colorRGB[1], b: this["RAL" + RAL].colorRGB[2]} ;
     };
 RAL.getColorEng = function (RAL) {
+RAL = RAL.toLowerCase();
+RAL = RAL.replace("ral","");
+RAL = RAL.replace(/\W+/g, "");
         return this["RAL" + RAL].color_en;
     };
 RAL.getColorGer = function (RAL) {
+RAL = RAL.toLowerCase();
+RAL = RAL.replace("ral","");
+RAL = RAL.replace(/\W+/g, "");
         return this["RAL" + RAL].color_de;
     };
 RAL.getRandomColor = function(){
