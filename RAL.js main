@@ -1073,23 +1073,23 @@ RAL.getColorGer = function (RAL) {
         return this["RAL" + RAL].color_de;
     };
 RAL.getRandomColor = function(){
-for(var prop in this){
 var tempArr = [];
+for(var prop in this){
 var t = prop.toString();
 if(t.indexOf("RAL") === 0){
 tempArr.push(this[prop]);
 }
 }
-return tempArr[Math.floor(Math.random() * tempArr.length].colorRGB;
+return tempArr[Math.floor(Math.random() * tempArr.length)].colorRGB;
     };
 RAL.getRandomColorObj = function(){
-for(var prop in this){
 var tempArr = [];
+for(var prop in this){
 var t = prop.toString();
 if(t.indexOf("RAL") === 0){
 tempArr.push(this[prop]);
 }
 }
-var objArr = tempArr[Math.floor(Math.random() * tempArr.length].colorRGB
+var objArr = tempArr[Math.floor(Math.random() * tempArr.length)].colorRGB;
 return {r: objArr[0], g: objArr[1], b: objArr[2]};
 };
